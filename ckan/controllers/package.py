@@ -542,6 +542,9 @@ class PackageController(base.BaseController):
 
         # if we are creating from a group then this allows the group to be
         # set automatically
+        
+        # TODO 
+        # We need to pass the organization name/id like the way we are passing the group_id on line 547
         data['group_id'] = request.params.get('group') or \
             request.params.get('groups__0__id')
 
